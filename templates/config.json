@@ -1,0 +1,13 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/thecodingchunks",
+        "prod_uri":"mysql://root:@localhost/thecodingchunks",
+        "fb_url":"https://facebook.com/thecodingchunks",
+        "tw_url":"https://facebook.com/thecodingchunks",
+        "gh_url":"https://facebook.com/thecodingchunks",
+        "blog_name":"The Coding Chunks",
+        "tag_line":"A Blog loved by Machine Learning Engineer"
+    }
+}
