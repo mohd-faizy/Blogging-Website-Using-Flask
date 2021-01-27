@@ -1,6 +1,6 @@
-# Machine learning Blogging Website Using Flask
+# Blogging Website Using Flask
 
- This is the a Machine Learning Blogging Website created Using Flask
+ This is the a Blogging Website created Using Flask
 
 
 
