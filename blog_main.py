@@ -11,11 +11,11 @@ with open('config.json', 'r') as c:
 local_server = True
 app = Flask(__name__)
 app.config.update(
-    MAIL_SERVER = 'smtp.gmail.com',
-    MAIL_PORT = '465',
-    MAIL_USE_SSL = True,
-    MAIL_USERNAME = params['gmail-user'],
-    MAIL_PASSWORD=  params['gmail-password']
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT='465',
+    MAIL_USE_SSL=True,
+    MAIL_USERNAME=params['gmail-user'],
+    MAIL_PASSWORD=params['gmail-password']
 )
 mail = Mail(app)
 if(local_server):
@@ -24,30 +24,43 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 
 db = SQLAlchemy(app)
+
+
 class Contacts(db.Model):
-    '''
-    sno, name, phone_num, msg, date, email
-    '''
+    # sno, name, phone_num, msg, date, email
     sno = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(20), nullable=False)
     phone_num = db.Column(db.String(12), nullable=False)
     msg = db.Column(db.String(120), nullable=False)
     date = db.Column(db.String(12), nullable=True)
-    
+
+
+class Posts(db.Model):
+    # sno, title, slug, content, img_file, date
+    sno = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(80), nullable=False)
+    slug = db.Column(db.String(21), nullable=False)
+    content = db.Column(db.String(120), nullable=False)
+    date = db.Column(db.String(12), nullable=True)
+    img_file = db.Column(db.String(12), nullable=True)
 
 
 @app.route("/")
 def home():
     return render_template('index.html', params=params)
 
+
 @app.route("/about")
 def about():
     return render_template('about.html', params=params)
 
-@app.route("/post")
-def post():
-    return render_template('post.html', params=params)
+
+@app.route("/post/<string:post_slug>", methods=['GET'])
+def post_route(post_slug):
+    post = Posts.query.filter_by(slug=post_slug).first()
+    return render_template('post.html', params=params, post=post)
+
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
@@ -58,11 +71,11 @@ def contact():
         phone = request.form.get('phone')
         message = request.form.get('message')
 
-        entry = Contacts(name=name, 
-                        phone_num=phone,
-                        msg=message,
-                        date=datetime.now(),
-                        email=email)
+        entry = Contacts(name=name,
+                         phone_num=phone,
+                         msg=message,
+                         date=datetime.now(),
+                         email=email)
 
         db.session.add(entry)
         db.session.commit()
