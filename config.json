@@ -8,6 +8,9 @@
         "tw_url":"https://facebook.com/thecodingchunks",
         "gh_url":"https://facebook.com/thecodingchunks",
         "blog_name":"The Coding Chunks",
-        "tag_line":"A Blog loved by Machine Learning Engineer"
+        "tag_line":"A Blog loved by Machine Learning Engineer",
+        "gmail-user":"your-email@gmail.com",
+        "gmail-password":"gmailpassword"
+
     }
 }

@@ -24,8 +24,6 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 
 db = SQLAlchemy(app)
-
-
 class Contacts(db.Model):
     '''
     sno, name, phone_num, msg, date, email
