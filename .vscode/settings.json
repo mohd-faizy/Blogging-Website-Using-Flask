@@ -3,5 +3,6 @@
         "activityBar.background": "#541533",
         "titleBar.activeBackground": "#751E47",
         "titleBar.activeForeground": "#FEFCFD"
-    }
+    },
+    "python.pythonPath": "C:\\Users\\mohdf\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }
