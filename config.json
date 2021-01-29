@@ -7,11 +7,15 @@
         "fb_url":"https://facebook.com/thecodingchunks",
         "tw_url":"https://facebook.com/thecodingchunks",
         "gh_url":"https://facebook.com/thecodingchunks",
-        "blog_name":"The Coding Chunks",
+        "blog_name":"TheCodingChunks",
         "tag_line":"A Blog loved by Machine Learning Engineer",
         "gmail-user":"your-email@gmail.com",
         "gmail-password":"gmailpassword",
-        "about_text": "Hi my name is Mohd Faizy and I love Datascience."
+        "about_text": "Hi my name is Mohd Faizy and I love Datascience.",
+        "no_of_posts": 5,
+        "login_image":"login.svg",
+        "admin_user":"mohd faizy",
+        "admin_password": "password"
 
     }
 }

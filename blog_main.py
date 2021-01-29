@@ -40,6 +40,7 @@ class Posts(db.Model):
     # sno, title, slug, content, img_file, date
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
+    tagline = db.Column(db.String(120), nullable=False)
     slug = db.Column(db.String(21), nullable=False)
     content = db.Column(db.String(120), nullable=False)
     date = db.Column(db.String(12), nullable=True)
@@ -48,12 +49,22 @@ class Posts(db.Model):
 
 @app.route("/")
 def home():
-    return render_template('index.html', params=params)
+    posts = Posts.query.filter_by().all()[0:params['no_of_posts']]
+    return render_template('index.html', params=params, posts=posts)
 
 
 @app.route("/about")
 def about():
     return render_template('about.html', params=params)
+
+
+@app.route("/dashboard", methods=['GET', 'POST'])
+def dashboard():
+    if request.method='POST':
+        # Redirect it to the admin panal
+        pass
+    else:
+        return render_template('login.html', params=params)
 
 
 @app.route("/post/<string:post_slug>", methods=['GET'])
