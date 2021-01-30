@@ -12,10 +12,11 @@
         "gmail-user":"your-email@gmail.com",
         "gmail-password":"gmailpassword",
         "about_text": "Hi my name is Mohd Faizy and I love Datascience.",
-        "no_of_posts": 5,
+        "no_of_posts": 2,
         "login_image":"login.svg",
         "admin_user":"faizy",
-        "admin_password": "12345"
+        "admin_password": "12345",
+        "upload_location":"C:\\Users\\mohdf\\Downloads\\00_GitClone\\Blogging-Website-Using-Flask\\static"
 
     }
 }
