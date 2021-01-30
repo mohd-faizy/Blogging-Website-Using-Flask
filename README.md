@@ -9,7 +9,7 @@
 ## __HOME__
 <p align='center'>
   <a href="#">
-    <img src='https://github.com/mohd-faizy/Blogging-Website-Using-Flask/blob/main/static/img/preview.png?raw=true' width=800px height=500px alt="preview_img">
+    <img src='https://github.com/mohd-faizy/Blogging-Website-Using-Flask/blob/main/static/img/preview.png?raw=true' width=800px height=450px alt="preview_img">
   </a>
 </p>
 
@@ -17,7 +17,7 @@
 
 <p align='center'>
   <a href="#">
-    <img src='https://github.com/mohd-faizy/Blogging-Website-Using-Flask/blob/main/static/img/admin.png?raw=true' width=800px height=500px alt="admin_img">
+    <img src='https://github.com/mohd-faizy/Blogging-Website-Using-Flask/blob/main/static/img/admin.png?raw=true' width=800px height=450px alt="admin_img">
   </a>
 </p>
 
