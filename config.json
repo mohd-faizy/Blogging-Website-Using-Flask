@@ -14,8 +14,8 @@
         "about_text": "Hi my name is Mohd Faizy and I love Datascience.",
         "no_of_posts": 5,
         "login_image":"login.svg",
-        "admin_user":"mohd faizy",
-        "admin_password": "password"
+        "admin_user":"faizy",
+        "admin_password": "12345"
 
     }
 }
